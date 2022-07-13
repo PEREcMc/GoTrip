@@ -54,6 +54,40 @@ body {
     background-image: url('/img/header_img/header-bottom.svg');
     background-size: 100%;
 }
+/* .header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+}
+.header::before {
+    left: 696px;
+    top: 173px;
+    width: 48px;
+    height: 63px;
+    background-image: url('/img/header_img/el-1.svg');
+}
+.header::before {
+    left: 560px;
+    top: 751px;
+    width: 157px;
+    height: 37px;
+    background-image: url('/img/header_img/el-2.svg');
+}
+.header::after {
+    left: 1187px;
+    top: 236px;
+    width: 157px;
+    height: 37px;
+    background-image: url('/img/header_img/el-3.svg');
+}
+.header::after {
+    left: 1320px;
+    top: 700px;
+    width: 63px;
+    height: 83px;
+    background-image: url('/img/header_img/el-4.svg');
+} */
 .header__top {
     position: relative;
     z-index: 1;
@@ -67,7 +101,6 @@ body {
     position: relative;
     z-index: 1;
     max-width: 592px;
-
 }
 .header__img {
     position: relative;
@@ -80,6 +113,8 @@ body {
     right: -95px;
     width: 894px;
     height: 940px;
+
+    pointer-events: none;
 }
 /* --------------------------------------NAV-------------------------------- */
 .nav {
@@ -111,6 +146,17 @@ body {
     height: 4px;
     border-radius: 100px;
 }
+.nav__list.nav__list-footer a:hover::after {
+    display: none;
+}
+.nav__list.nav__list-footer a:hover {
+    transition: color 0.2s ease-in;
+    color: #FF7C4E;
+}
+.nav__login.nav__login-footer a:hover {
+    transition: color 0.2s ease-in;
+    color: #FF7C4E;
+}
 .nav__login {
     display: flex;
     align-items: center;
@@ -119,11 +165,17 @@ body {
     font-size: 15px;
     font-weight: 500;
 }
+.nav__login-footer {
+    column-gap: 66px;
+}
 .button {
     display: inline-block;
     padding: 13px 43px;
     background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
     border-radius: 100px;
+}
+.button-footer {
+    color: #fff;
 }
 .button:hover {
     color: #FF584E;
@@ -137,6 +189,12 @@ body {
 .logo {
     font-size: 20px;
     font-weight: 700;
+}
+.logo a {
+    color: inherit !important;
+}
+.logo-footer {
+    color: #FF7C4E;
 }
 /* --------------------------------------HEADER CONTENT-------------------------------- */
 
@@ -224,7 +282,7 @@ body {
 .button-univers:hover {
     color: #FF584E;
     transition: color 0.4s ease-in;
-    background: #fff;
+    background: #E5E5E5;
 }
 .button-univers:active {
     position: relative;
@@ -274,4 +332,167 @@ body {
     right: -27px;
     padding-right: 26px;
     justify-content: flex-end;
+}
+/* --------------------------------------MAIN - CASTOMERS-------------------------------- */
+
+.customers {
+    padding: 100px 0px 133px 0px;
+}
+.customers__row {
+    display: flex;
+    column-gap: 68px;
+}
+.customers__img {
+    max-width: 478px;
+}
+.customers__img img {
+    border-radius: 60px;
+}
+.customers__content {
+    max-width: 565px;
+}
+.customers__title {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+.customers__review {
+    max-width: 490px;
+}
+.review__client {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    margin-bottom: 60px;
+}
+.review__client-avatar {
+    overflow: hidden;
+    width: 134px;
+    height: 134px;
+    background: #FF794E;
+    border-radius: 71.5px;
+}
+.review__client-description {
+}
+.review__client-description-name {
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.review__client-description-country {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--secondary);
+}
+.review__text {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+.review__rating {
+}
+/* --------------------------------------MAIN - GETSTARTED-------------------------------- */
+.getstarted {
+    padding: 100px 0px 100px 0px;
+}
+.getstarted__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    padding: 115px 0px;
+    background: #FFFFFF;
+    border-radius: 60px;
+
+}
+.getstarted__wrapper::before,
+.getstarted__wrapper::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 83px;
+}
+.getstarted__wrapper::before {
+    left: 74px;
+    bottom: 56px;
+    background-image: url('/img/calltoaction/cta-el-01.svg');
+}
+.getstarted__wrapper::after {
+    top: 74px;
+    right: 80px;
+    background-image: url('/img/calltoaction/cta-el-02.svg');
+}
+.getstarted__title {
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.getstarted__text {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+.getstarted__button {
+}
+.button-univers {
+}
+/* --------------------------------------MAIN - SUBSCRIBE-------------------------------- */
+.subscribe {
+    padding: 35px 0px 106px 0px;
+}
+.subscribe__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe__title {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+    max-width: 494px;
+}
+.subscribe__form {
+    display: flex;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #C4C4C4;
+    border-radius: 35px;
+}
+.subscribe__input {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 46px 191px 46px 46px;
+}
+.subscribe__input::placeholder {
+    color: var(--secondary);
+}
+.subscribe__button {
+    margin: 12px 15px 12px 0px;
+    padding: 33px 87px;
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+.subscribe__button:hover {
+    color: #FF584E;
+    transition: color 0.4s ease-in;
+    background: #E5E5E5;
+}
+.subscribe__button:active {
+    position: relative;
+    top: 1px;
+}
+/* --------------------------------------FOOTER-------------------------------- */
+.footer {
+    margin-bottom: 74px;
+}
+.footer a:not(.button-footer) {
+    color: var(--secondary);
 }
