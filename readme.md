@@ -2,4 +2,4 @@
 
 ### Training maket
 
-### [Результат здесь]()
+### [Результат здесь](https://perecmc.github.io/GoTrip/)
