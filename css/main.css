@@ -586,7 +586,7 @@ body {
         row-gap: 40px;
         font-size: 22px;
     }
-    .nav-mobile .nav__list a.active::after,
+    /* .nav-mobile .nav__list a.active::after, */
     .nav-mobile .nav__list a.hover::after {
         display: none;
     }
@@ -681,6 +681,9 @@ body {
     }
     .destinations {
         padding: 40px 0px 50px 0px;
+    }
+    .destinations__content {
+        margin-bottom: 30px;
     }
     .destinations__row {
         flex-direction: column;
@@ -839,6 +842,9 @@ body {
     }
 }    
 @media (max-width: 460px) {
+    .header__img img {
+        width: 93%;
+    }
     .destinations {
         padding: 40px 0px 10px 0px;
     }
@@ -887,6 +893,15 @@ body {
         align-items: center;
     }
 }
+@media (max-width: 360px) {
+    .review__client {
+        column-gap: 20px;
+    }
+    .review__client-avatar {
+        width: 90px;
+        height: 90px;
+    }
+}
 
 @media (min-width: 320px) {
 .destinations {
@@ -894,5 +909,8 @@ body {
     }
     .owl-stage {
         min-height: 304px;
+    }
+    .no-scroll {
+        overflow-y: hidden ;
     }
 }
