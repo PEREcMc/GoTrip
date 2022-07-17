@@ -18,16 +18,22 @@
                     <div class="nav__logo">
                         <h2 class="logo"><a href="#">GoTrip</a></h2>
                     </div>
-                    <ul class="nav__list">
+                    <ul class="nav__list nav__list-header">
                         <li><a class="active" href="#">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                    <ul class="nav__login">
+                    <ul class="nav__login nav__login-header">
                         <li><a href="#">Sign up</a></li>
                         <li><a class="button" href="#">Login</a></li>
                     </ul>
+
+                    <button type="button" class="nav__toggle">
+                        <div class="menu-icon-wrapper">
+                            <div class="menu-icon"></div>
+                        </div>
+                    </button>
                 </nav>
             </div>
             <div class="header__row">
@@ -125,8 +131,8 @@
             <div class="container">
                 <div class="subscribe__wrapper">
                     <h2 class="subscribe__title">Subscribe <br> To Our Newsletter</h2>
-                    <div class="subscribe__form">
-                        <form action="#">
+                    <div class="subscribe__content">
+                        <form class="subscribe__form" action="#">
                             <input type="email" class="subscribe__input" required placeholder="Yourmail@mail.com">
                             <button type="submit" class="subscribe__button">Subscribe</button>
                         </form>
@@ -138,7 +144,7 @@
 
     <footer class="footer">
         <div class="container">
-            <nav class="nav">
+            <nav class="nav nav-footer">
                 <div class="nav__logo">
                     <h2 class="logo logo-footer"><a href="#">GoTrip</a></h2>
                 </div>
